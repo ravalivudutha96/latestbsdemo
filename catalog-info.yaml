@@ -7,7 +7,17 @@ metadata:
   # annotations:
   #   github.com/project-slug: backstage/backstage
   #   backstage.io/techdocs-ref: dir:.
+  annotations:
+    gitpod.io/host: gitpod.io
+    github.com/project-slug: your-org/your-repo
+  links:
+  - url: https://gitpod.io/#https://github.com/your-org/your-repo
+    title: Open In Gitpod
+    icon: dashboard
 spec:
   type: website
-  owner: john@example.com
-  lifecycle: experimental
+  #owner: john@example.com
+  owner: guests   #added
+  system: examples      #added
+  lifecycle: experimental    
+  providesApis: [example-grpc-api]      #added
