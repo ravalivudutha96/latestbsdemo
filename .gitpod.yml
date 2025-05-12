@@ -15,8 +15,15 @@ ports:
 tasks:
   - name: Install dependencies & start app
     init: |
+      export NVM_DIR="$HOME/.nvm"
+      [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+      nvm install 18
+      nvm use 18
       yarn install
     command: |
+      export NVM_DIR="$HOME/.nvm"
+      [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+      nvm use 18
       yarn dev
 
 # VS Code extensions that are helpful for Backstage development
